@@ -1,4 +1,7 @@
 # helpful function to see if word starts with vowel
+from numpy.ma.core import append
+
+
 def starts_with_vowel(word):
     """
     Return True if the work starts with a vowel, False otherwise
@@ -36,23 +39,30 @@ for word in words:
     # word is too short. Do nothing.
     if len(word) < 3:
         # place the word in the pig_latin list
+        pig_latin.append(word)
         ### your code here ###
         continue
 
     # starts with vowel, modify accordingly and put in list
     elif starts_with_vowel(word) == True:
         # modify the word and place in pig_latin list
+
+        pig_latin.append(word+"vay")
         ### your code here ###
         continue
 
     # starts with consonant, modify accordingly  and put in list
     else:
         # modify word and place in pig_latin list
+        front = word[0]
+        rest = word[1:len(words)]
+        pig_latin.append(rest+front+"ay")
         ### your code here ###
         continue
 
 # a new sentence in which you will re-assemble each of the modified words
 new_sentence = ""
+
 
 # re-assemble list of words into string
 for w in pig_latin:

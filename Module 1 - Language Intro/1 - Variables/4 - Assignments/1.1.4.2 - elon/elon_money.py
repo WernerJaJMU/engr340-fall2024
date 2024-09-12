@@ -8,14 +8,15 @@ and simply write in the final result.
 Prompt: On October 27th, 2022, Elon Musk purchased Twitter for $44B in total, with reportedly $33B of his own money. Since
 that time, it appears this investment has not worked out. If Elon has instead bought $44B of US Treasury Bonds, how much
 would his investment be worth in 10-year and 20-year bonds? Assume the 10-year bonds pay 3.96%,
-the 20-year bonds pay 4.32%, with each compounding annually.
+the 20-year bonds pay 4.32%, with each compounding annually
 """
+import math
+interest_10 = .0396
+interest_20 = .0432
+investment = 33000000000
 
-### all your code below ###
+ten_year_final = investment*pow((1+interest_10),10)
 
+twenty_year_final = investment*pow((1+interest_20),20)
 
-# final answer for 10-year
-ten_year_final = None
-
-# final answer for 20-year
-twenty_year_final = None
+print("Elon would make", twenty_year_final, "after twenty years and", ten_year_final, "after 10 years.")

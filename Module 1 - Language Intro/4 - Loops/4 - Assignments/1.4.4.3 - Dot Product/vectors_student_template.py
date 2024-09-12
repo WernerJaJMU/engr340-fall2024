@@ -25,8 +25,7 @@ Step 2: Iterate through the vector(s) and calculate the dot product
 """
 
 # store your result here. Do not change the name
-dot_product = 0
-
+dot_product = sum(i*j for i, j in zip(vector_b, vector_a))
 ### Your code here
 
 """

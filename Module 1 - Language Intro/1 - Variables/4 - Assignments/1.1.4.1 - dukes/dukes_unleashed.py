@@ -9,7 +9,12 @@ Note: this problem does not require the "compounding interest" formula from the 
 """
 
 ### Your code here ###
+tuition_in = 30792
+tuition_out = 47882
+interest = .05
 
-in_state_gift = 0
+in_state_gift = tuition_in/interest
 
-out_state_gift = 0
+out_state_gift = tuition_out/interest
+
+print ("The amount an alumni would need to invest to cover in state tuition for one student is",in_state_gift, "and", out_state_gift, "for out of state tuition")
