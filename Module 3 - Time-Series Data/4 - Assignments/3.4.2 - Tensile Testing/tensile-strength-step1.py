@@ -60,14 +60,8 @@ def calculate_stress(force, sample_diameter):
     :return: An array of stresses experienced by the sample in Kilo Pascals (KPa)
     """
 
-    # calculate the cross-section area (mm^2)
-    ### your code here ###
-
-    # calculate stress (MPa) from load (kN) and cross-sectional area
-    ### your code here ###
-
-    # delete this line and replace it with your own
-    stress = None
+    area = (np.pi*pow(sample_diameter,2))/4
+    stress = (force / area)*1000
 
     return stress
 
