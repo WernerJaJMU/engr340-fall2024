@@ -1,4 +1,5 @@
 import numpy as np
+from scipy.cluster.hierarchy import average
 from scipy.stats import ttest_1samp, norm, ttest_ind
 
 
@@ -32,12 +33,17 @@ def one_sided_tests(_files: list, _mean: float, _alpha: float, _less_than: bool)
     """
 
     # list of files that are out of spec
-    reject_null_hypothesis = []
+
+
 
     # YOUR CODE HERE #
-
+    (stat, p_value) = ttest_1samp(list, popmean=_mean, alternative='less than')
     # return samples that were rejected
-    return reject_null_hypothesis
+    if p_value < _alpha:
+        print('')
+
+    else:
+        print(list)
 
 
 if __name__ == "__main__":
